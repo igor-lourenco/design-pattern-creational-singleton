@@ -30,7 +30,7 @@ public class Client {
 		doQuery2();
 		doQuery3();
 		
-		// Foram feitas 3 conexões, mesmo com limite de 2 conexões
+		// Foram feitas 3 conexões, mesmo com limite de 2 conexões, assim foi criado 6 conexões com o banco
 		// Assim não tem limite de quantas conexões serão criadas com o banco de dados
 	}
 }
