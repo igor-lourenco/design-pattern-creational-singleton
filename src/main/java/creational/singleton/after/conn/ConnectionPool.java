@@ -12,17 +12,17 @@ public class ConnectionPool {
 		return singleton;
 	}
 	
-	private ConnectionPool() {
+	private ConnectionPool() { 
 		System.out.println("Creating Connection Pool");
 		connectionsPool = new ArrayList<Connection>();
-		for(int i = 0; i < POOL_SIZE; i++) {
+		for(int i = 0; i < POOL_SIZE; i++) {     // criando as conexoes com o banco limitadas pelo POOL_SIZE 
 			connectionsPool.add(new Connection());
 		}
 	}
 	
 	public Connection getConnection() {
 		Connection avaiable = null;
-		for(Connection conn: connectionsPool) {
+		for(Connection conn: connectionsPool) { // percorre a lista pra pegar uma conexao disponivel
 			if(!conn.isInUse()) {
 				avaiable = conn;
 				break;
@@ -36,7 +36,7 @@ public class ConnectionPool {
 		return avaiable;
 	}
 	
-	public void leaveConnection(Connection conn) {
+	public void leaveConnection(Connection conn) { // libera a conexao 
 		conn.setInUse(false);
 	}
 }
