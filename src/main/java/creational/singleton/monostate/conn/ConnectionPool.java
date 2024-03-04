@@ -7,7 +7,7 @@ public class ConnectionPool {
 	public final static int POOL_SIZE = 2;
 	private static List<Connection> connectionsPool;
 	
-	static {
+	static { // executado somente uma vez quando o projeto for iniciado
 		System.out.println("Creating Connection Pool");
 		connectionsPool = new ArrayList<Connection>();
 		for(int i = 0; i < POOL_SIZE; i++) {
