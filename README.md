@@ -26,7 +26,7 @@ Todas as implementações do Singleton tem esses dois passos em comum:
 
 Se o seu código tem acesso à classe singleton, então ele será capaz de chamar o método estático da singleton. Então sempre que aquele método é chamado, o mesmo objeto é retornado.
 
-
+## Projeto
 
 Esse código implementa o padrão Singleton e o padrão Pool de Conexões.
 
@@ -47,7 +47,11 @@ Esse código implementa o padrão Singleton e o padrão Pool de Conexões.
   - query(String sql): Método que simula a execução de uma consulta SQL.
   - isInUse() e setInUse(boolean status): Métodos para verificar e definir o status de uso da conexão.
 
+![uml_singleton](https://github.com/igor-lourenco/design-pattern-creational-singleton/blob/main/uml/silgleton.png)
+
 Em resumo, o código simula um cenário em que várias consultas ao banco de dados são executadas usando um pool de conexões para melhorar a eficiência e o desempenho, garantindo que o número de conexões simultâneas não exceda um limite definido.
+
+
 
 
 
